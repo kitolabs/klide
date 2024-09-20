@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# Function to setup GitHub credentials
+# Function to setup GitHub credentials by using a PAT token
 setup_github_credentials() {
     # Prompt the user for the GitHub username
     read -p 'Enter your GitHub username: ' GITHUB_USERNAME
@@ -26,7 +26,7 @@ clone_repository() {
     echo "$repo_name"
 }
 
-# Function to create VS Code workspace file
+# Function to create VS Code workspace file by providing the workspace name and collection of folder names
 create_workspace_file() {
     local workspace_name=$1
     shift

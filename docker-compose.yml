@@ -1,0 +1,10 @@
+version: '3'
+
+services:
+  powershell:
+    build: .
+    container_name: powershell-with-git
+    stdin_open: true # Keep STDIN open to allow interaction
+    tty: true # Allocate a pseudo-TTY for interactive shell
+    volumes:
+      - ./scripts:/scripts # Mount the 'scripts' folder from the host to the container
